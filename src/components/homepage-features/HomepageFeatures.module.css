@@ -1,0 +1,201 @@
+.featureListTitle {
+    font-size: 32px;
+    margin-bottom: 24px;
+    color: var(--1inch-title);
+}
+
+.featureList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 28px;
+    row-gap: 24px;
+}
+
+.featureCard {
+    border: 1px solid var(--1inch-border);
+    border-radius: 16px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    backdrop-filter: blur(100px);
+}
+
+html[data-theme='light'] .featureCard {
+    background-color: var(--1inch-bg-card);
+    border: none;
+    box-shadow: 0 0 4px rgba(71, 73, 79, 0.1), 0 1px 2px rgba(71, 73, 79, 0.25);
+    margin-bottom: 20px;
+}
+
+.featureCard:hover {
+    text-decoration: none;
+}
+
+.featureCardTitle {
+    color: var(--1inch-title);
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.featureCardGithubLink {
+    display: contents;
+    color: var(--1inch-text);
+}
+
+.featureCardGithubLink:hover {
+    color: var(--1inch-bg-3)
+}
+
+.featureCardText {
+    margin-bottom: 16px;
+}
+
+.featureCardImage {
+    display: block;
+    margin: 0 auto 24px;
+    width: 319px;
+    height: 172px;
+}
+
+.featureCardImage::after {
+    content: '';
+    display: block;
+    width: 319px;
+    height: 172px;
+    transform: scale(0.5) translate(-160px, -86px);
+}
+
+.aggregationProtocolImage::after {
+    content: url("../../../static/img/aggregation-protocol-dark.png");
+}
+
+html[data-theme='light'] .aggregationProtocolImage::after {
+    content: url("../../../static/img/aggregation-protocol-light.png");
+}
+
+.limitOrderProtocolImage::after {
+    content: url("../../../static/img/limit-order-protocol-dark.png");
+}
+
+html[data-theme='light'] .limitOrderProtocolImage::after {
+    content: url("../../../static/img/limit-order-protocol-light.png");
+}
+
+.limitOrderProtocolImage::after {
+    content: url("../../../static/img/limit-order-protocol-dark.png");
+}
+
+html[data-theme='light'] .limitOrderProtocolImage::after {
+    content: url("../../../static/img/limit-order-protocol-light.png");
+}
+
+.spotPriceAggregatorImage::after {
+    content: url("../../../static/img/spot-price-aggregator-dark.png");
+}
+
+html[data-theme='light'] .spotPriceAggregatorImage::after {
+    content: url("../../../static/img/spot-price-aggregator-light.png");
+}
+
+.fusion::after {
+    content: url("../../../static/img/fusion-dark.png");
+}
+
+html[data-theme='light'] .fusion::after {
+    content: url("../../../static/img/fusion-light.png");
+}
+
+
+.featureCardLinkWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 4px;
+}
+
+.featureCardLinkTitle {
+    position: relative;
+}
+
+.featureCardLinkSwagger {
+    position: absolute;
+    left: calc(100% + 4px);
+    font-size: 10px;
+    line-height: 10px;
+    padding: 3px 6px;
+    border-radius: 8px;
+    font-weight: 500;
+    background: var(--1inch-bg-6);
+}
+
+.featureCardLinkWrap {
+    color: var(--1inch-text);
+}
+
+.featureCardLinkWrap:last-child {
+    margin-bottom: 0;
+}
+
+.featureCardLinkWrap:hover {
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s;
+    color: var(--1inch-text-3);
+}
+
+.featureCardLinkWrap:hover .featureCardLinkSwagger {
+    background: #85eb2b;
+    color: var(--1inch-common-text);
+    transition: .2s;
+}
+
+.featureCardLinkIcon {
+    color: var(--1inch-common-bg);
+}
+
+.featureCardLinks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 28px;
+}
+
+@media (max-width: 1200px) {
+    .featureList {
+        grid-gap: 16px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .featureList {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 16px;
+    }
+}
+
+@media (max-width: 780px) {
+    .featureList {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 400px) {
+    .featureCardLinks {
+        grid-template-columns: 1fr;
+    }
+
+    .featureCardImage {
+        width: 240px;
+        height: 130px;
+    }
+
+    .featureCardImage::after {
+        width: 240px;
+        height: 130px;
+        transform: scale(0.4) translate(-210px, -100px);;
+    }
+}
