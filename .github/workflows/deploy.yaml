@@ -41,55 +41,36 @@ jobs:
           release_branches: master
           fetch_all_tags: true
 
-  create_release:
-    name: Create Release
+  deploy:
+    name: Deploy
+    needs: pre-run
     runs-on: ubuntu-latest
-    needs: bump_version
-    if: ${{ needs.bump_version.outputs.new_tag != null }}
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v4.1.6
-        with:
-          submodules: recursive
+      - name: Clone repository
+        uses: actions/checkout@v3
 
       - name: Setup Node
-        uses: actions/setup-node@v4.0.2
+        uses: actions/setup-node@v3
         with:
           node-version: '16.17.1'
 
-      - name: Install yarn
-        run: npm install --global yarn
-
-      - name: Cache dependencies
-        uses: actions/cache@v4.0.2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install Dependencies
+      - name: Install pnpm and dependencies
         run: |
-          yarn
-          yarn install --frozen-lockfile
+          npm install -g pnpm@8.8.0
+          pnpm install
 
-      - name: Build
-        run: |
-          yarn run build
+      - name: Build production
+        run: pnpm run build
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.6.1
-        with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: build # The folder the action should deploy.
-
-      - name: Create GitHub Release
-        id: create_release
-        uses: actions/create-release@v1.1.0
+      - name: Deploy to Cloudflare Pages
+        if: github.ref == 'refs/heads/staging'
+        uses: cloudflare/wrangler-action@v3
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          projectName: governance-1inch-community
+          distDir: build
+          branch: main
         with:
-          tag_name: ${{ needs.bump_version.outputs.new_tag }}
-          release_name: Release ${{ needs.bump_version.outputs.new_tag }}
-          body: |
-            New version ${{ needs.bump_version.outputs.new_tag }}
+          apiToken: ${{ secrets.CLOUDFLARE_PAGES_API_TOKEN }}
+          accountId: e34eeb161ddd9fee77da1de105a9141b
+          packageManager: pnpm
+          command: pages deploy ${{ env.distDir }} --project-name=${{ env.projectName }} --branch=${{ env.branch }} --commit-dirty=true

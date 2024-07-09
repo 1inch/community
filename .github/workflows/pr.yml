@@ -14,32 +14,18 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Clone source code
-        uses: actions/checkout@v2
-        with:
-          submodules: recursive
+      - name: Clone repository
+        uses: actions/checkout@v3
 
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: '16.17.1'
 
-      - name: Install yarn
-        run: npm install --global yarn
-
-      - name: Cache dependencies
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install Dependencies
+      - name: Install pnpm and dependencies
         run: |
-          yarn
-          yarn install --frozen-lockfile
+          npm install -g pnpm@8.8.0
+          pnpm install
 
-      - name: Build
-        run: |
-          yarn run build
+      - name: Build production
+        run: pnpm run build
