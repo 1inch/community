@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+// const lightCodeTheme = require('prism-react-renderer/themes/github');
+// const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -54,32 +54,6 @@ const config = {
           src: '/img/1inch_logo_without_text.svg',
         },
         items: [
-          {
-            label: 'Protocols',
-            position: 'left',
-            items: [
-              {
-                label: 'Aggregation Protocol',
-                href: '/docs/aggregation-protocol/introduction/',
-              },
-              {
-                label: 'Fusion Swap',
-                href: '/docs/fusion-swap/introduction/',
-              },
-              {
-                label: 'Limit Order Protocol',
-                href: '/docs/limit-order-protocol/introduction/',
-              },
-              {
-                label: 'Spot Price Aggregator',
-                href: '/docs/spot-price-aggregator/introduction/',
-              },
-              {
-                label: 'RabbitHole',
-                href: '/docs/rabbithole/summary/',
-              },
-            ],
-          },
           {
             label: 'Governance',
             position: 'left',
@@ -160,8 +134,8 @@ const config = {
         contextualSearch: false,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        // theme: lightCodeTheme,
+        // darkTheme: darkCodeTheme,
         additionalLanguages: ['solidity'],
       },
     }),

@@ -1,12 +1,10 @@
 import React from 'react';
 import styles from './index.module.css';
-import HomepageFeatures from '../components/homepage-features/HomepageFeatures';
 import HomepageDeveloperLinks from '../components/homepage-developer-links/HomepageDeveloperLinks';
 import HomepageFooter from '../components/homepage-footer/HomepageFooter';
 import HomePageBackgroundImage from '../../static/img/logo-background.svg';
 import Layout from '@theme/Layout';
 import Head from "@docusaurus/core/lib/client/exports/Head";
-import useBaseUrl from "@docusaurus/core/lib/client/exports/useBaseUrl";
 import HomepagePreFooter from "../components/homepage-prefooter/HomepagePreFooter";
 
 function HomepageHeader() {
@@ -41,9 +39,6 @@ export default function Home() {
                 <div className="page-container">
                     <HomePageBackgroundImage className={styles.bgImage}/>
                     <HomepageHeader/>
-                    <div className={styles.section}>
-                        <HomepageFeatures/>
-                    </div>
                     <div className={styles.section2}>
                         <HomepageDeveloperLinks/>
                     </div>

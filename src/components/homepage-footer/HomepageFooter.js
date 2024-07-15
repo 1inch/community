@@ -16,23 +16,6 @@ import FooterLogoImage from '../../../static/img/footer-logo.svg'
 const FooterLinks = {
     links: [
         {
-            title: 'Protocols',
-            links: [
-                {
-                    title: 'Liquidity Protocol',
-                    link: 'https://1inch.io/liquidity-protocol/'
-                },
-                {
-                    title: 'Aggregation Protocol',
-                    link: 'https://1inch.io/aggregation-protocol/'
-                },
-                {
-                    title: 'Limit Order Protocol',
-                    link: 'https://1inch.io/limit-order-protocol/'
-                }
-            ]
-        },
-        {
             title: 'Governance',
             links: [
                 {
