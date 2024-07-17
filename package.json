@@ -26,7 +26,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "redoc": "^2.0.0-rc.57",
-    "swagger-ui-react": "4.15.5",
+    "swagger-ui-react": "4.19.1",
     "url-loader": "^4.1.1"
   },
   "browserslist": {
