@@ -1,11 +1,11 @@
 name: Deploy
 
 on:
-  # push:
-  #   branches:
-  #     - master
-  #   paths-ignore:
-  #     - .github/**
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - .github/**
   # manual trigger
   workflow_dispatch:
 
