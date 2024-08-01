@@ -57,7 +57,7 @@ function DeveloperLink({image, title, description, link, button}) {
 export default function HomepageDeveloperLinks() {
     return (
         <section>
-            <h2 className={styles.developerLinksTitle}>Developer links</h2>
+            <h2 className={styles.developerLinksTitle}></h2>
             <div className={styles.developerLinksWrap}>
                 {
                     DeveloperList.map((props, idx) => (

@@ -10,7 +10,7 @@ import HomepagePreFooter from "../components/homepage-prefooter/HomepagePreFoote
 function HomepageHeader() {
     return (
         <header className={styles.headerWrap}>
-            <h1 className={styles.mainTitle}>Documentation Portal</h1>
+            <h1 className={styles.mainTitle}>1inch DAO Governance & Community</h1>
         </header>
     );
 }

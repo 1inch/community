@@ -82,28 +82,6 @@ const config = {
               },
             ],
           },
-          {
-            "label": "Developer links",
-            "position": "right",
-            "items": [
-              {
-                label: 'Grants Program',
-                href: 'https://1inch.io/foundation-grant-program/',
-              },
-              {
-                label: 'Bug bounty',
-                href: 'https://airtable.com/shrddQOOkm3hOLuzd',
-              },
-              {
-                href: 'https://www.npmjs.com/search?q=%401inch',
-                label: 'NPM'
-              },
-              {
-                href: 'https://github.com/1inch',
-                label: 'GitHub'
-              }
-            ]
-          }
         ]
       },
       typesense: {
