@@ -5,19 +5,18 @@ import clsx from "clsx";
 
 const DeveloperList = [
     {
-        link: 'https://1inch.io/foundation-grant-program/',
+        link: 'https://gov.1inch.community/docs/governance/overview',
         button: {
-            title: 'Apply for Grant',
-            href: 'https://airtable.com/shr899d3K9Bw963CP'
+            title: 'Explore Governance',
+            href: 'https://gov.1inch.community/docs/governance/overview'
         },
         image: (
             <div className={clsx(styles.developerCardImage, styles.foundationGrantProgramImage)}/>
         ),
-        title: 'Grants program',
+        title: '1inch DAO Governance Docs',
         description: (
             <>
-                Incentivizing individual developers and teams to build on the 1inch Network's protocols and contribute
-                to protocol evolution.
+                Explore a comprehensive library of 1inch DAO Governance resources and information.
             </>
         )
     },
@@ -62,7 +61,7 @@ function DeveloperLink({image, title, description, link, button}) {
             <div className={styles.developerCardText}>
                 {description}
                 &nbsp;
-                {link && <Link className={styles.developerCardLink} to={link}>Read more</Link>}
+                {link && <Link className={styles.developerCardLink} to={link}></Link>}
             </div>
 
             <Link className={styles.developerCardButton} to={button.href}>{button.title}</Link>
