@@ -21,19 +21,19 @@ Our goal is to ensure transparent and effective decision-making within the 1inch
 
 # Website
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This website is built using [Docusaurus 3](https://docusaurus.io/), a modern static website generator.
 This repo contains submodules that you need to pull `git submodule update --recursive`
 
 ### Installation
 
 ```
-$ yarn
+$ pnpm install
 ```
 
 ### Local Development
 
 ```
-$ yarn start
+$ pnpm start
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
@@ -41,30 +41,22 @@ This command starts a local development server and opens up a browser window. Mo
 ### Build
 
 ```
-$ yarn build
+$ pnpm build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-### Deployment
-
-```
-$ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
-
 ### Info about development
-You can see `warning` in time `yarn install` - it's okey
+You can see `warning` in time `pnpm install` - it's okey
 
-File `docs\limit-order-protocol\smart-contract\_category_.json` changed after `yarn install`. Discard changes in this file before execute some other commands
+File `docs\limit-order-protocol\smart-contract\_category_.json` changed after `pnpm install`. Discard changes in this file before execute some other commands
 
-Search doesn't work in `yarn start`.
+Search doesn't work in `pnpm start`.
 For check working of the search you need:
-- `yarn build`
-- `yarn serve`
+- `pnpm build`
+- `pnpm serve`
 
 If you got some error check that you does all in accordiance with README.
-After that remove `yarn.lock` (`package-lock.json`), `node_modules` and `build` (if there is one). And try again.
-Also check node.js version. All correct worked with node version 16.17.1
+After that remove `pnpm-lock.yaml` (`package-lock.json`), `node_modules` and `build` (if there is one). And try again.
+Also check node.js version. All correct worked with node version 18.2.0
 
