@@ -16,6 +16,12 @@ const config = {
   favicon: 'img/favicon/favicon.ico',
   organizationName: '1inch', // Usually your GitHub org/user name.
   projectName: '1inch-docs', // Usually your repo name.
+  plugins: [
+    [
+      require.resolve('docusaurus-plugin-search-local'),
+      { indexPages: true, highlightSearchTermsOnTargetPage: true, searchResultLimits: 10 },
+    ],
+  ],
   presets: [
     [
       '@docusaurus/preset-classic',
