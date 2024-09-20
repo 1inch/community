@@ -55,7 +55,7 @@ const config = {
         },
         items: [
           {
-            label: 'Governance',
+            label: 'Docs / Governance',
             position: 'left',
             type: 'doc',
             docId: 'governance/overview',
@@ -64,6 +64,10 @@ const config = {
             label: 'Open Source',
             position: 'left',
             items: [
+              {
+                label: '1inch Resolver Terms of Use',
+                href: 'https://gov.1inch.community/docs/open-source/resolver-tou',
+              },
               {
                 label: 'Limit order contract',
                 href: 'https://github.com/1inch/limit-order-protocol',
