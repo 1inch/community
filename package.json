@@ -12,7 +12,6 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "fix-md": "node automation/fix.js"
   },
   "dependencies": {
     "@docusaurus/core": "3.4.0",
