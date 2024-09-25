@@ -296,7 +296,7 @@ This SLA applies solely to the Exclusive Resolver API functionality. Please, not
 
 3.2. Fill Rate. The Exclusive Resolver shall maintain a minimum fill rate of 90% for the Exclusive Orders as calculated on a rolling 7 calendar days period. "Fill Rate" is calculated based on the following formula:
 
-<img src='/docs/static/assets/fill-rate.png' alt="fill rate" />
+<img src='/static/assets/fill-rate.png' alt="fill rate" />
 
 ---
 
