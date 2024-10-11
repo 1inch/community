@@ -9,13 +9,15 @@ This website is built using [Docusaurus 3](https://docusaurus.io/), a modern sta
 
 This folder contains submodules that you need to pull `git submodule update --recursive`
 
-### Installation
+## Running the docs site locally
+
+### Install base dependencies
 
 ```
 $ pnpm install
 ```
 
-### How to run locally
+### Run local environment
 
 ```
 $ pnpm start
@@ -31,7 +33,8 @@ $ pnpm build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-### Info about development
+### General info
+
 You can see `warning` in time `pnpm install` - it's okey
 
 File `docs\limit-order-protocol\smart-contract\_category_.json` changed after `pnpm install`. Discard changes in this file before execute some other commands
