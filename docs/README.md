@@ -3,25 +3,11 @@
     <img src="https://github.com/1inch/farming/blob/master/.github/1inch_github_b.svg#gh-dark-mode-only" />
 </div>
 
-# Welcome to the 1inch Community & Governance Repository!
-
-This repository contains all the essential documentation and guidelines related to the 1inch governance processes:
-
-- **Governance proposals**
-- **Voting mechanisms**
-- **Role responsibilities**
-- **Community participation**
-- **And more**
-
-Our goal is to ensure transparent and effective decision-making within the 1inch community. Contributions and feedback are highly encouraged to help us improve and evolve our governance practices.
-
-***
-
-
-# Website
+# Welcome to the 1inch Community & Governance Docs!
 
 This website is built using [Docusaurus 3](https://docusaurus.io/), a modern static website generator.
-This repo contains submodules that you need to pull `git submodule update --recursive`
+
+This folder contains submodules that you need to pull `git submodule update --recursive`
 
 ### Installation
 
@@ -29,7 +15,7 @@ This repo contains submodules that you need to pull `git submodule update --recu
 $ pnpm install
 ```
 
-### Local Development
+### How to run locally
 
 ```
 $ pnpm start
